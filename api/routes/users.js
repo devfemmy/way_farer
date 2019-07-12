@@ -28,14 +28,20 @@ router.post('/auth/signup', (req, res, next) => {
 
 //user sign in
 
-// router.post('/auth/signin', (req, res, next) => {
-//     res.status(200).json({
-//         status: 'success',
-//         data: {
-//             user_id: Number
-//         }
-//     });
-// });
+router.post('/auth/signin', (req, res, next) => {
+    const cred = {
+        email:req.body.email,
+        password:req.body.password
+    }
+    res.status(200).json({
+        status: 'success',
+        data: {
+            user_id: Number,
+            is_admin: Boolean,
+            token: String
+        }
+    });
+});
 
 
 //user delete
