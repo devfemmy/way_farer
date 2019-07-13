@@ -19,9 +19,9 @@ router.post('/auth/signup', (req, res, next) => {
     res.status(200).json({
         status: 'success',
         data: {
-            user_id: Number,
-            is_admin: Boolean,
-            token: String
+            user_id: 2,
+            is_admin: false,
+            token: 'e34rffdjkfdljfkdjkkf'
         }
     });
 });
@@ -36,9 +36,9 @@ router.post('/auth/signin', (req, res, next) => {
     res.status(200).json({
         status: 'success',
         data: {
-            user_id: Number,
-            is_admin: Boolean,
-            token: String
+            user_id: 1,
+            is_admin: false,
+            token: 'e345gdghsgshdghsdghhgh'
         }
     });
 });
