@@ -21,6 +21,22 @@ router.post('/trips', (req, res, next) => {
     });
 });
 
+//admin can cancel a trip
+
+router.patch('/trips/:tripId', (req, res, next) => {
+    const cred = {
+        token:req.body.token,
+        user_id:req.body.user_id,
+        is_admin: req.body.is_admin
+    }
+    res.status(200).json({
+        status: 'success',
+        data: {
+            message: 'Trip cancelled successfully'
+        }
+    });
+});
+
 
 
 module.exports = router;
